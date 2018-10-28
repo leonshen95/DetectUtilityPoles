@@ -59,7 +59,7 @@ Note:
 - Our aim is to create .txt-file for each .jpg-image-file - in the same directory and with the same name, but with .txt-extension, and put to file: object number and object coordinates on this image. You can refer [here](https://medium.com/@manivannan_data/how-to-train-yolov2-to-detect-custom-objects-9010df784f36). Your text file should like this:
 
 ![Alt text](https://cdn-images-1.medium.com/max/1600/0*DlB8bHOE0E8WzLik.PNG)
-[category number] [object center in X] [object center in Y] [object width in X] [object width in Y]
+-[category number] [object center in X] [object center in Y] [object width in X] [object width in Y]
 
 - Great! We now have a .txt file per image in the training set, telling YOLOv2 where the object we want to detect is at: our data set is completely annotated. Make sure both file types are in the same folder. The below image illustrates how the folder should look like by now:
 
