@@ -7,7 +7,7 @@ The goal is to download the images based on GPS location followed by:
 3. Measure the height of the pol and the distance between each component.
 4. Build a 3D model of the pole.
 
-## Preface
+### Preface
 
 We used MacOS as our developing environment. Things may be subject to change in Windows or other operating systems. 
 
