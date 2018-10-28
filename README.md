@@ -54,7 +54,7 @@ Note:
 - You shouldn't use "default class" function when saving to YOLO format, it will not be referred.
 - When saving as YOLO format, "difficult" flag is discarded.
 
-![Alt text](https://github.com/leonshen95/DetectUtilityPoles/blob/master/YOLO.jpg?raw=true)
+![Alt text](https://github.com/leonshen95/DetectUtilityPoles/blob/master/YOLO.jpg)
 
 - Our aim is to create .txt-file for each .jpg-image-file - in the same directory and with the same name, but with .txt-extension, and put to file: object number and object coordinates on this image. You can refer [here](https://medium.com/@manivannan_data/how-to-train-yolov2-to-detect-custom-objects-9010df784f36). Your text file should like this:
 
@@ -92,11 +92,12 @@ backup = backup/
 utility poles
 ```
 - A final file we have to prepare (I know, powerful GPU eagerly waiting to start crunching!), is the .cfg file. I just duplicated the yolo-tiny.cfg file, and made the following edits:
+```
 Line 2: set batch=24, this means we will be using 64 images for every training step
 Line 3: set subdivisions=8, the batch will be divided by 8 to decrease GPU VRAM requirements. If you have a powerful GPU with loads of VRAM, this number can be decreased, or batch could be increased. The training step will throw a CUDA out of memory error so you can adjust accordingly.
 Line 120: set classes=1, the number of categories we want to detect.
 Line 114: set filters=(classes + 5)*5 in our case filters=30.
-
+```
 - To start training, YOLOv2 requires a set of convolutional weights. To make things a little easier, Joseph offers a set that was pre-trained on Imagenet. This conv.23 file can be [downloaded](https://pjreddie.com/media/files/darknet19_448.conv.23)(76Mb) from the official YOLOv2 website and provides an excellent starting point. We’ll need this file for the next step.
 
 ### Training
@@ -125,4 +126,7 @@ gcc -I/usr/local/cuda/include/  -Wall -Wfatal-errors  -Ofast -lm....
 ```
 usage: ./darknet <function>
 ```
-- You already have the config file for YOLO in the cfg/ subdirectory.
+- Now you have the config file for YOLO in the cfg/ subdirectory.Time for the fun part! Enter the following command into your terminal and watch your GPU do what it does best (copy your train.txt and test.txt to yolo_darknet folder):
+```
+~./darknet detector train cfg/obj.data cfg/yolo-obj.cfg darknet19_448.conv.23
+```
