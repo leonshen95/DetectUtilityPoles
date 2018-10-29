@@ -72,7 +72,7 @@ Note:
 ```
 current_dir = '<Your Dataset Path>'
 ```
-- For testing purpose, I only used a few images. But for formal training later, you are supposed to have more lines in the images below:
+- After running the the Python script, you will see something below. For testing purpose, I only used a few images. But for formal training later, you are supposed to have more lines in the images below:
 ![Alt text](https://github.com/leonshen95/DetectUtilityPoles/blob/master/train_test.jpg?raw=true)
 
 ### Prepare YOLO configuration files
