@@ -1,5 +1,5 @@
 # DetectUtilityPoles
-## 10.28 Updated(finishing labeling, and in the process of training annotated images...)
+## 11.1 Updated(finishing labeling, and in the process of training annotated images...)
 
 The goal is to download the images based on GPS location followed by:
 1. Detecting the poles
@@ -130,3 +130,9 @@ usage: ./darknet <function>
 ```
 ~./darknet detector train cfg/obj.data cfg/yolo-obj.cfg darknet19_448.conv.23
 ```
+### Current status
+
+- Now we are working on training... Due to the slow training speed on Mac, we are consdiering using external GPU to build our own model...
+
+- **_examplecode.py_** combines two modules: Getting images from Google Street View API and use the model we trained to see if there is any utility poles. So basically it will take in two types of inputs: 1. the coordinates location used for Google Map; 2. The four corner coordinates of the rectangles that model has detected there is a utility pole.
+
