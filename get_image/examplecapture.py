@@ -55,7 +55,7 @@ PoleTop = 200
 PoleBottom = 2000-PoleTop
 
 
-key     = 'AIzaSyAgfIHLW-ZOWqtEMQE_aC42ZBHZ6YhU_Fo'  #put your key here
+key     = ''  #put your key here
 
 # This function creates Directories
 
