@@ -6,8 +6,9 @@ from django.shortcuts import HttpResponse
 # Create your views here.
 def map(request):
     if request.method == "POST":
-        longitude = request.POST.get("longitude", None)
-        latitude = request.POST.get("latitude", None)
+        location = request.POST.get("latitude", None)
+        #longitude = request.POST.get("longitude", None)
+
         print(longitude, latitude)
         #models.Coordinates.objects.create(longitude=longitude, latitude=latitude)
 

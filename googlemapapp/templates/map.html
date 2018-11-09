@@ -19,12 +19,10 @@
     </style>
   </head>
   <body>
-    <div id="input">
-        <h1>Input Coordinates：</h1>
-        <form action="/index/" method="post">
-            <input type="text" name="longitude">
-            <input type="text" name="latitude">
-            <input type="submit" value="submit">
+    <div id="form" >
+        <form action="map.html" method="post">
+            <input id="input" type="text" name="coordinates" value="123"/>
+            <input type="submit" value="submit"/>
         </form>
     </div>
     <div id="map"></div>
