@@ -53,12 +53,15 @@ TopX = 100
 BottomX = 2000-TopX
 PoleTop = 200
 PoleBottom = 2000-PoleTop
-
+num=0
 
 key     = 'AIzaSyAgfIHLW-ZOWqtEMQE_aC42ZBHZ6YhU_Fo'  #put your key here
 
 # This function creates Directories
-
+def down(url):
+    global num
+    urllib.request.urlretrieve(url,str(num)+".jpg")
+    num=num+1
 def newCoord(lon, lat, radius, angle_d):
     angle = math.pi*angle_d/360
     dx = radius*math.cos(angle)
@@ -146,7 +149,8 @@ def downloadStreetViewImage(size, lon, lat, heading, pitch, fov, key, directory,
       filename_jason = directory.decode('utf-8') + '/' + filename + '.json'
       outputfile_json = open(filename_jason, 'w')
       json.dump(r_metadata_jason, outputfile_json)
-      urllib.request.urlretrieve(url)
+      # urllib.request.urlretrieve(url)
+      down(url)
       retpolepos = {}
       retpolepos['pole'] = {}
       retpolepos['status'] = 1
