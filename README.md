@@ -1,5 +1,5 @@
 # DetectUtilityPoles
-## 11.1 Updated(finishing labeling, and in the process of training annotated images...)
+## 11.7 Updated(finishing labeling and training annotated images, in the process of testing...)
 
 The goal is to download the images based on GPS location followed by:
 1. Detecting the poles
@@ -130,9 +130,20 @@ usage: ./darknet <function>
 ```
 ~./darknet detector train cfg/obj.data cfg/yolo-obj.cfg darknet19_448.conv.23
 ```
-### Current status
+-Usually sufficient 2000 iterations for each class(object), but not less than 4000 iterations in total. But for a more precise definition when you should stop training, use the following manual:
 
-- Now we are working on training... Due to the slow training speed on Mac, we are consdiering using external GPU to build our own model...
+1. During training, you will see varying indicators of error, and you should stop when no longer decreases 0.XXXXXXX avg:
+```
+Region Avg IOU: 0.798363, Class: 0.893232, Obj: 0.700808, No Obj: 0.004567, Avg Recall: 1.000000, count: 8 Region Avg IOU: 0.800677, Class: 0.892181, Obj: 0.701590, No Obj: 0.004574, Avg Recall: 1.000000, count: 8
+
+9002: 0.211667, 0.060730 avg, 0.001000 rate, 3.868000 seconds, 576128 images Loaded: 0.000000 seconds
+```
+- **9002** - iteration number (number of batch)
+- **0.060730 avg** - average loss (error) - the lower, the better
+2. Once training is stopped, you should take some of last .weights-files from darknet\build\darknet\x64\backup and choose the best of them.
+
+### Current status
+- In GoogleMapApp folder, the files will provide an interface for user to login and select the target coordinates.
 
 - **_examplecode.py_** combines two modules: Getting images from Google Street View API and use the model we trained to see if there is any utility poles. So basically it will take in two types of inputs: 1. the coordinates location used for Google Map; 2. The four corner coordinates of the rectangles that model has detected there is a utility pole.
 
