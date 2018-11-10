@@ -18,7 +18,7 @@ num=0
 a="42.379653"
 b="-71.124635"
 for i in range(1,7):
-    urllib.request.urlretrieve("https://maps.googleapis.com/maps/api/streetview?size=640x640&location="+a+","+b+"&heading="+str(heading)+"&key=AIzaSyAgfIHLW-ZOWqtEMQE_aC42ZBHZ6YhU_Fo",str(i)+".jpg")
+    urllib.request.urlretrieve("https://maps.googleapis.com/maps/api/streetview?size=640x640&location="+a+","+b+"&heading="+str(heading)+"&key=",str(i)+".jpg")
     heading=heading+60
 
 for i in range(1,7):
