@@ -1,3 +1,4 @@
+import classify_image
 import urllib.request
 import subprocess
 def runprogram(program, args, inputstr):
@@ -14,13 +15,14 @@ def runprogram(program, args, inputstr):
 program="./classify_image.py"
 heading=0
 num=0
-a="38.06344466"
-b="-84.52000672"
+a="42.379653"
+b="-71.124635"
 for i in range(1,7):
     urllib.request.urlretrieve("https://maps.googleapis.com/maps/api/streetview?size=640x640&location="+a+","+b+"&heading="+str(heading)+"&key=AIzaSyAgfIHLW-ZOWqtEMQE_aC42ZBHZ6YhU_Fo",str(i)+".jpg")
     heading=heading+60
 
 for i in range(1,7):
     subprocess.run([program,"--image_file",str(i)+".jpg"])
+
 
 
