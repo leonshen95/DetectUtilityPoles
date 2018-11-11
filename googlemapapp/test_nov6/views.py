@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from .models import Users
 import json
-from test_nov6 import models
 import urllib.request
 from django.shortcuts import HttpResponse
+import urllib.request
+import subprocess
+
 
 # Create your views here.
 def map(request):
@@ -11,14 +13,15 @@ def map(request):
         latitude = request.POST.get("lat", None)
         longitude = request.POST.get("lng", None)
 
-        print(longitude, latitude)
+
+        program = "./classify_image.py"
         heading = 0
-        num = 0
         for i in range(1, 7):
             urllib.request.urlretrieve(
                 "https://maps.googleapis.com/maps/api/streetview?size=640x640&location=" + latitude + "," + longitude + "&heading=" + str(
                     heading) + "&key=AIzaSyAgfIHLW-ZOWqtEMQE_aC42ZBHZ6YhU_Fo", "./streetviewimages/"+ str(i) + ".jpg")
             heading = heading + 60
+        subprocess.run([program])
     return render(request, "map.html", )
 
 def sign_up(request):
