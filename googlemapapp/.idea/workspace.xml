@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60b73053-1722-4eb9-a054-fcb718575e2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/googlemapapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/googlemapapp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/streetviewimages/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/streetviewimages/1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/streetviewimages/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/streetviewimages/2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/streetviewimages/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/streetviewimages/3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/streetviewimages/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/streetviewimages/4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/streetviewimages/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/streetviewimages/5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/streetviewimages/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/streetviewimages/6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_nov6/classify_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_nov6/classify_image.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_nov6/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_nov6/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +76,7 @@
           <entry key="css" value="1" />
           <entry key="html" value="1" />
           <entry key="js" value="1" />
-          <entry key="py" value="5" />
+          <entry key="py" value="7" />
           <entry key="scss" value="1" />
         </counts>
       </usages-collector>
@@ -86,7 +85,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="1" />
-          <entry key="Python" value="5" />
+          <entry key="Python" value="7" />
           <entry key="SCSS" value="1" />
         </counts>
       </usages-collector>
@@ -94,14 +93,14 @@
         <counts>
           <entry key="html" value="549" />
           <entry key="js" value="198" />
-          <entry key="py" value="1040" />
+          <entry key="py" value="1463" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="549" />
           <entry key="JavaScript" value="198" />
-          <entry key="Python" value="1040" />
+          <entry key="Python" value="1463" />
         </counts>
       </usages-collector>
     </session>
@@ -111,11 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/googlemapapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-              <folding>
-                <element signature="e#636#668#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -138,26 +134,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_nov6/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="38">
+              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1541964807001" expanded="true" signature="814:815" ph="..." />
-                <marker date="1541964807001" expanded="true" signature="2158:2163" ph="..." />
-                <marker date="1541964807001" expanded="true" signature="2298:2303" ph="..." />
+                <marker date="1541969515615" expanded="true" signature="1196:1197" ph="..." />
+                <marker date="1541969515615" expanded="true" signature="2540:2545" ph="..." />
+                <marker date="1541969515615" expanded="true" signature="2680:2685" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_nov6/classify_image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="197" column="34" lean-forward="true" selection-start-line="197" selection-start-column="34" selection-end-line="197" selection-end-column="34" />
+            <state relative-caret-position="284">
+              <caret line="200" column="14" selection-start-line="200" selection-start-column="14" selection-end-line="200" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -224,6 +220,7 @@
         <option value="$PROJECT_DIR$/templates/sign-up.html" />
         <option value="$PROJECT_DIR$/static/js/quickstart.js" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/test_nov6/classify_image.py" />
         <option value="$PROJECT_DIR$/test_nov6/views.py" />
       </list>
     </option>
@@ -234,11 +231,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="992" />
-    <option name="y" value="5" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="563" />
+    <option name="y" value="27" />
     <option name="width" value="955" />
-    <option name="height" value="1079" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -368,10 +365,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="451" y="22" width="764" height="864" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.2660858" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49891067" weight="0.562323" />
       <window_info id="Structure" order="1" sideWeight="0.50108933" side_tool="true" weight="0.24929178" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -385,7 +382,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30736545" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29644808" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -470,16 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googlemapapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sign-up.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1235">
@@ -511,6 +498,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/1072250519/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="5152" column="8" selection-start-line="5152" selection-start-column="8" selection-end-line="5152" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
@@ -518,23 +512,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_nov6/views.py">
+    <entry file="file://$PROJECT_DIR$/googlemapapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1541964807001" expanded="true" signature="814:815" ph="..." />
-            <marker date="1541964807001" expanded="true" signature="2158:2163" ph="..." />
-            <marker date="1541964807001" expanded="true" signature="2298:2303" ph="..." />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python36/Lib/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="708" selection-start-line="708" selection-end-line="708" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_nov6/classify_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="197" column="34" lean-forward="true" selection-start-line="197" selection-start-column="34" selection-end-line="197" selection-end-column="34" />
+        <state relative-caret-position="284">
+          <caret line="200" column="14" selection-start-line="200" selection-start-column="14" selection-end-line="200" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_nov6/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1541969515615" expanded="true" signature="1196:1197" ph="..." />
+            <marker date="1541969515615" expanded="true" signature="2540:2545" ph="..." />
+            <marker date="1541969515615" expanded="true" signature="2680:2685" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

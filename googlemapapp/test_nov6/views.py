@@ -5,6 +5,8 @@ import urllib.request
 from django.shortcuts import HttpResponse
 import urllib.request
 import subprocess
+import os
+
 
 
 # Create your views here.
@@ -14,14 +16,20 @@ def map(request):
         longitude = request.POST.get("lng", None)
 
 
-        program = "./classify_image.py"
+        #program = "D:/pyworkspace/DetectUtilityPoles/googlemapapp/test_nov6/classify_image.py"
         heading = 0
         for i in range(1, 7):
             urllib.request.urlretrieve(
                 "https://maps.googleapis.com/maps/api/streetview?size=640x640&location=" + latitude + "," + longitude + "&heading=" + str(
-                    heading) + "&key=AIzaSyAgfIHLW-ZOWqtEMQE_aC42ZBHZ6YhU_Fo", "./streetviewimages/"+ str(i) + ".jpg")
+                    heading) + "&fov=120&key=AIzaSyAgfIHLW-ZOWqtEMQE_aC42ZBHZ6YhU_Fo", "./streetviewimages/"+ str(i) + ".jpg")
             heading = heading + 60
-        subprocess.run([program])
+        os.system("python D:/pyworkspace/DetectUtilityPoles/googlemapapp/test_nov6/classify_image.py")
+        polelist = []
+        f = open('D:/pyworkspace/DetectUtilityPoles/googlemapapp/streetviewimages/polelist.txt')
+        for line in f.readlines():
+            line = line.strip()
+            polelist.append(line)
+        f.close()
     return render(request, "map.html", )
 
 def sign_up(request):

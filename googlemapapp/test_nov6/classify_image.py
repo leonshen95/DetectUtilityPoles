@@ -61,10 +61,10 @@ class NodeLookup(object):
                uid_lookup_path=None):
     if not label_lookup_path:
       label_lookup_path = os.path.join(
-          FLAGS.model_dir, 'imagenet_2012_challenge_label_map_proto.pbtxt')
+          FLAGS.model_dir, 'D:/pyworkspace/DetectUtilityPoles/googlemapapp/pb/imagenet_2012_challenge_label_map_proto.pbtxt')
     if not uid_lookup_path:
       uid_lookup_path = os.path.join(
-          FLAGS.model_dir, 'imagenet_synset_to_human_label_map.txt')
+          FLAGS.model_dir, 'D:/pyworkspace/DetectUtilityPoles/googlemapapp/pb/imagenet_synset_to_human_label_map.txt')
     self.node_lookup = self.load(label_lookup_path, uid_lookup_path)
 
   def load(self, label_lookup_path, uid_lookup_path):
@@ -122,7 +122,7 @@ def create_graph():
   """Creates a graph from saved GraphDef file and returns a saver."""
   # Creates graph from saved graph_def.pb.
   with tf.gfile.FastGFile(os.path.join(
-      FLAGS.model_dir, 'classify_image_graph_def.pb'), 'rb') as f:
+      FLAGS.model_dir, 'D:/pyworkspace/DetectUtilityPoles/googlemapapp/pb/classify_image_graph_def.pb'), 'rb') as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
     _ = tf.import_graph_def(graph_def, name='')
@@ -167,9 +167,9 @@ def run_inference_on_image(image):
       human_string = node_lookup.id_to_string(node_id)
       if ("pole" in human_string) and ("flagpole" not in human_string):
         polelist.append(image)
-        polelist.append(predictions[node_id])
+        #polelist.append(predictions[node_id])
       score = predictions[node_id]
-      print('%s (score = %.5f)' % (human_string, score))
+      #print('%s (score = %.5f)' % (human_string, score))
 
 
 # def maybe_download_and_extract():
@@ -195,10 +195,12 @@ def main(_):
   # maybe_download_and_extract()
   for number in range(1,7):
     image = (FLAGS.image_file if FLAGS.image_file else
-             os.path.join(FLAGS.model_dir, str(number)+'.jpg'))
+             os.path.join(FLAGS.model_dir, 'D:/pyworkspace/DetectUtilityPoles/googlemapapp/streetviewimages/'+str(number)+'.jpg'))
     run_inference_on_image(image)
   if len(polelist):
-    print(polelist)
+    with open('D:/pyworkspace/DetectUtilityPoles/googlemapapp/streetviewimages/polelist.txt','w') as f:
+      for line in polelist:
+        f.write(line+'\n')
 
 
 if __name__ == '__main__':
