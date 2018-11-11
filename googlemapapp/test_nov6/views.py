@@ -21,7 +21,7 @@ def map(request):
         for i in range(1, 7):
             urllib.request.urlretrieve(
                 "https://maps.googleapis.com/maps/api/streetview?size=640x640&location=" + latitude + "," + longitude + "&heading=" + str(
-                    heading) + "&fov=120&key=AIzaSyAgfIHLW-ZOWqtEMQE_aC42ZBHZ6YhU_Fo", "./streetviewimages/"+ str(i) + ".jpg")
+                    heading) + "&fov=120&key=", "./streetviewimages/"+ str(i) + ".jpg")
             heading = heading + 60
         os.system("python D:/pyworkspace/DetectUtilityPoles/googlemapapp/test_nov6/classify_image.py")
         polelist = []
