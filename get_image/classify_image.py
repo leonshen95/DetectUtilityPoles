@@ -165,10 +165,11 @@ def run_inference_on_image(image):
     top_k = predictions.argsort()[-FLAGS.num_top_predictions:][::-1]
     for node_id in top_k:
       human_string = node_lookup.id_to_string(node_id)
-      if "pole" in human_string:
+      if ("pole" in human_string) and ("flagpole" not in human_string):
         polelist.append(image)
+        polelist.append(predictions[node_id])
       score = predictions[node_id]
-      # print('%s (score = %.5f)' % (human_string, score))
+      print('%s (score = %.5f)' % (human_string, score))
 
 
 # def maybe_download_and_extract():
@@ -192,9 +193,10 @@ def run_inference_on_image(image):
 
 def main(_):
   # maybe_download_and_extract()
-  image = (FLAGS.image_file if FLAGS.image_file else
-           os.path.join(FLAGS.model_dir, 'cropped_panda.jpg'))
-  run_inference_on_image(image)
+  for number in range(1,7):
+    image = (FLAGS.image_file if FLAGS.image_file else
+             os.path.join(FLAGS.model_dir, str(number)+'.jpg'))
+    run_inference_on_image(image)
   if len(polelist):
     print(polelist)
 
