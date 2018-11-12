@@ -189,19 +189,35 @@ def run_inference_on_image(image):
 #     statinfo = os.stat(filepath)
 #     print('Successfully downloaded', filename, statinfo.st_size, 'bytes.')
 #   tarfile.open(filepath, 'r:gz').extractall(dest_directory)
-
+def same(x):
+  try:
+    for i in range(len(x)):
+      if (int(x[i+1][-5])-int(x[i][-5])==1):
+        del x[i+1]
+  except IndexError:
+    pass
+  if ("1.jpg" in x) and ("6.jpg" in x):
+    del x[-1]
 
 def main(_):
   # maybe_download_and_extract()
   for number in range(1,7):
     image = (FLAGS.image_file if FLAGS.image_file else
-             os.path.join(FLAGS.model_dir, 'D:/pyworkspace/DetectUtilityPoles/googlemapapp/streetviewimages/'+str(number)+'.jpg'))
+             os.path.join(FLAGS.model_dir, 'D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/'+str(number)+'.jpg'))
     run_inference_on_image(image)
+  same(polelist)
   if len(polelist):
-    with open('D:/pyworkspace/DetectUtilityPoles/googlemapapp/streetviewimages/polelist.txt','w') as f:
-      for line in polelist:
-        f.write(line+'\n')
-
+    if os.path.exists('D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/polelist.txt'):
+      os.remove('D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/polelist.txt')
+    f = open('D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/polelist.txt','w')
+    for line in polelist:
+      print(line)
+      f.write(line[-5:]+'\n')
+    f.close()
+  else:
+    print('no poles')
+    if os.path.exists('D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/polelist.txt'):
+      os.remove('D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/polelist.txt')
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
