@@ -127,6 +127,15 @@ def create_graph():
     graph_def.ParseFromString(f.read())
     _ = tf.import_graph_def(graph_def, name='')
 
+def same(x):
+  try:
+    for i in range(len(x)):
+      if (int(x[i+1][0])-int(x[i][0])==1):
+        del x[i+1]
+  except IndexError:
+    pass
+  if ("1.jpg" in x) and ("6.jpg" in x):
+    del x[-1]
 
 def run_inference_on_image(image):
   """Runs inference on an image.
@@ -167,9 +176,9 @@ def run_inference_on_image(image):
       human_string = node_lookup.id_to_string(node_id)
       if ("pole" in human_string) and ("flagpole" not in human_string):
         polelist.append(image)
-        polelist.append(predictions[node_id])
+        #polelist.append(predictions[node_id])
       score = predictions[node_id]
-      print('%s (score = %.5f)' % (human_string, score))
+      #print('%s (score = %.5f)' % (human_string, score))
 
 
 # def maybe_download_and_extract():
@@ -197,6 +206,8 @@ def main(_):
     image = (FLAGS.image_file if FLAGS.image_file else
              os.path.join(FLAGS.model_dir, str(number)+'.jpg'))
     run_inference_on_image(image)
+  print(polelist)
+  same(polelist)
   if len(polelist):
     print(polelist)
 
