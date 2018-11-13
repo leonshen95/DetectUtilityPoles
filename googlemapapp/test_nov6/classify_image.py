@@ -190,14 +190,15 @@ def run_inference_on_image(image):
 #     print('Successfully downloaded', filename, statinfo.st_size, 'bytes.')
 #   tarfile.open(filepath, 'r:gz').extractall(dest_directory)
 def same(x):
-  try:
-    for i in range(len(x)):
-      if (int(x[i+1][-5])-int(x[i][-5])==1):
-        del x[i+1]
-  except IndexError:
-    pass
-  if ("1.jpg" in x) and ("6.jpg" in x):
-    del x[-1]
+  if len(x)>1:
+    try:
+      for i in range(len(x)):
+        if (int(x[i+1][-5])-int(x[i][-5])==1):
+          del x[i+1]
+    except IndexError:
+      pass
+    if ("1.jpg" in x[0]) and ("6.jpg" in x[-1]):
+      del x[-1]
 
 def main(_):
   # maybe_download_and_extract()
