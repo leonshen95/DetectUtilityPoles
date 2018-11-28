@@ -1,5 +1,5 @@
 # DetectUtilityPoles
-## 11.7 Updated(finishing labeling, training and testing. Now in the process of combining front end and back end...)
+## 11.28 Updated(finishing labeling, training and testing. Now in the process of combining front end and back end...)
 
 The goal is to download the images based on GPS location followed by:
 1. Detecting the poles
