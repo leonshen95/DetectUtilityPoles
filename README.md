@@ -15,10 +15,6 @@ We used MacOS as our developing environment. Things may be subject to change in 
 
 - We use **_LabelImg_.py** to annotate our training data. Anotation will be saved in coordinates as txt. You can also see the details [here](https://github.com/tzutalin/labelImg#macos).
 
-Here is an idea about how it works eventually.
-
-![Alt text](https://raw.githubusercontent.com/tzutalin/labelImg/master/demo/demo3.jpg)
-
 Type the following command to make sure you meet the requirements.
 
 ```
