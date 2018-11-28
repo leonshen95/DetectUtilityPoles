@@ -1,5 +1,5 @@
 # DetectUtilityPoles
-## 11.7 Updated(finishing labeling and training annotated images, in the process of testing...)
+## 11.28 Updated(finishing labeling, training and testing. Now in the process of combining front end and back end...)
 
 The goal is to download the images based on GPS location followed by:
 1. Detecting the poles
@@ -142,7 +142,22 @@ Region Avg IOU: 0.798363, Class: 0.893232, Obj: 0.700808, No Obj: 0.004567, Avg 
 - **0.060730 avg** - average loss (error) - the lower, the better
 2. Once training is stopped, you should take some of last .weights-files from darknet\build\darknet\x64\backup and choose the best of them.
 
+### Testing 
+- Path to the folder where your Darknet.exe locates and type the following command:
+```
+./darknet detector test data/obj.data yolov3-tiny-obj.cfg backup/yolov3-tiny-obj_10000.weights data/obj/666.jpg -ext_output < data/train.txt > result.txt
+```
+- The testing data in above case is **data/obj/666.jpg** and you can changing the testing target accordingly. The results will be saved in result.txt. You should see the similar content as follow:
+```
+data/obj/666.jpg: Predicted in 0.774528 seconds.
+utility poles: 69%
+```
+![Alt text](https://github.com/leonshen95/DetectUtilityPoles/blob/master/predictions%201.jpg?raw=true)
+![Alt text](https://github.com/leonshen95/DetectUtilityPoles/blob/master/predictions%202.jpg?raw=true)
+
 ### Current status
+- We are during the proccess of combining GoogleMap interface and the detection network.
+
 - In GoogleMapApp folder, the files will provide an interface for user to login and select the target coordinates.
 
 - **_examplecode.py_** combines two modules: Getting images from Google Street View API and use the model we trained to see if there is any utility poles. So basically it will take in two types of inputs: 1. the coordinates location used for Google Map; 2. The four corner coordinates of the rectangles that model has detected there is a utility pole.
