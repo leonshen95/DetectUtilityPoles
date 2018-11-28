@@ -34,7 +34,7 @@ def read_result():
 # a="42.350120"
 # b="-71.106552"
 # for i in range(1,7):
-#     urllib.request.urlretrieve("https://maps.googleapis.com/maps/api/streetview?size=640x640&location="+a+","+b+"&heading="+str(heading)+"&fov=120&key=AIzaSyC0YHD07RkF_YDfS2pHTCLnu-VQlkAabH0",str(i)+".jpg")
+#     urllib.request.urlretrieve("https://maps.googleapis.com/maps/api/streetview?size=640x640&location="+a+","+b+"&heading="+str(heading)+"&fov=120&key=",str(i)+".jpg")
 #     heading=heading+60
 #
 # # for i in range(1,7):
