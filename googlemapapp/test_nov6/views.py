@@ -11,17 +11,17 @@ polelist = []
 def run_detection():
     for i in range (1,7):
 
-        os.system("D:/darknet/build/darknet/x64/darknet detector test D:/darknet/build/darknet/x64/data/obj.data yolov3-tiny-obj.cfg D:/darknet/build/darknet/x64/backup/yolov3-tiny-obj_10000.weights D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/"+str(i)+".jpg -dont_show -ext_output < D:/darknet/build/darknet/x64/data/train.txt > D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/result.txt")
+        os.system("./users/wangfuyao/downloads/darknet/build/darknet/x64/darknet detector test /users/wangfuyao/downloads/darknet/build/darknet/x64/data/obj.data yolov3-tiny-obj.cfg /users/wangfuyao/downloads/darknet/build/darknet/x64/backup/yolov3-tiny-obj_10000.weights /users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/streetviewimages/"+str(i)+".jpg -dont_show -ext_output < /users/wangfuyao/downloads/darknet/build/darknet/x64/data/train.txt > /users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/result.txt")
         read_result()
 def read_result():
     global polelist
-    with open ("D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/result.txt") as f:
+    with open ("/users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/result.txt") as f:
         text=f.read().split()
     print(text)
     try:
         if text[6]=="poles:":
             polelist.append(text[0][-6:-1])
-            shutil.copyfile("predictions.jpg","D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/predictions/"+text[0][-6:-1])
+            shutil.copyfile("predictions.jpg","/users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/predictions/"+text[0][-6:-1])
     except IndexError:
         pass
 
@@ -31,12 +31,12 @@ def same(x):
     for i in range(len(x)):
       if (int(x[i+1][0])-int(x[i][0])==1):
         del x[i+1]
-        os.remove("D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/predictions/"+str(x[i+1])+".jpg")
+        os.remove("/users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/predictions/"+str(x[i+1])+".jpg")
   except IndexError:
     pass
   if ("1.jpg" in x) and ("6.jpg" in x):
     del x[-1]
-    os.remove("D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/predictions/6.jpg")
+    os.remove("/users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/predictions/6.jpg")
   polelist=[]
 
 # Create your views here.
