@@ -4,10 +4,40 @@ import json
 import urllib.request
 from django.shortcuts import HttpResponse
 import urllib.request
-import subprocess
+import shutil
 import os
 
+polelist = []
+def run_detection():
+    for i in range (1,7):
 
+        os.system("D:/darknet/build/darknet/x64/darknet detector test D:/darknet/build/darknet/x64/data/obj.data yolov3-tiny-obj.cfg D:/darknet/build/darknet/x64/backup/yolov3-tiny-obj_10000.weights D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/"+str(i)+".jpg -dont_show -ext_output < D:/darknet/build/darknet/x64/data/train.txt > D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/result.txt")
+        read_result()
+def read_result():
+    global polelist
+    with open ("D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/result.txt") as f:
+        text=f.read().split()
+    print(text)
+    try:
+        if text[6]=="poles:":
+            polelist.append(text[0][-6:-1])
+            shutil.copyfile("predictions.jpg","D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/predictions/"+text[0][-6:-1])
+    except IndexError:
+        pass
+
+def same(x):
+  global polelist
+  try:
+    for i in range(len(x)):
+      if (int(x[i+1][0])-int(x[i][0])==1):
+        del x[i+1]
+        os.remove("D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/predictions/"+str(x[i+1])+".jpg")
+  except IndexError:
+    pass
+  if ("1.jpg" in x) and ("6.jpg" in x):
+    del x[-1]
+    os.remove("D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/predictions/6.jpg")
+  polelist=[]
 
 # Create your views here.
 def map(request):
@@ -21,10 +51,12 @@ def map(request):
         for i in range(1, 7):
             urllib.request.urlretrieve(
                 "https://maps.googleapis.com/maps/api/streetview?size=640x640&location=" + latitude + "," + longitude + "&heading=" + str(
-                    heading) + "&fov=90&key=AIzaSyC0YHD07RkF_YDfS2pHTCLnu-VQlkAabH0", "./static/streetviewimages/"+ str(i) + ".jpg")
+                    heading) + "&fov=120&key=AIzaSyC0YHD07RkF_YDfS2pHTCLnu-VQlkAabH0", "./static/streetviewimages/"+ str(i) + ".jpg")
             heading = heading + 60
-        os.system("python D:/pyworkspace/DetectUtilityPoles/googlemapapp/test_nov6/classify_image.py")
-        polelist = []
+
+        run_detection()
+        same(polelist)
+        '''
         if os.path.exists('D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/polelist.txt'):
 
             f = open('D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/polelist.txt','r')
@@ -34,7 +66,7 @@ def map(request):
             f.close()
 
         print(polelist)
-
+        '''
     return render(request, "map.html", )
 
 def sign_up(request):
