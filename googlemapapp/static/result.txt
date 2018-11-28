@@ -1,0 +1,2 @@
+/Users/liuknan/documents/github/DetectUtilityPoles/googlemapapp/static/streetviewimages/6.jpg: Predicted in 0.685909 seconds.
+utility poles: 54%

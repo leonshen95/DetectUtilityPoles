@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15760f6a-9dab-4b32-9964-c395a3bffc99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_image/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/get_image/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_image/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/get_image/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_image/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/get_image/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_image/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/get_image/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_image/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/get_image/5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_image/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/get_image/6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_image/classify_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_image/classify_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_image/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_image/test.py" afterDir="false" />
-    </list>
+    <list default="true" id="15760f6a-9dab-4b32-9964-c395a3bffc99" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +12,7 @@
     <session id="1054799423">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.3" value="1" />
@@ -61,58 +51,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/3DModel/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1541557115904" expanded="true" signature="204:209" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examplecapture.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="56" column="37" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/get_image/examplecapture.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1121">
-              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
-              <folding>
-                <marker date="1541744341882" expanded="true" signature="1377:1459" ph="..." />
-                <marker date="1541744341882" expanded="true" signature="1499:1504" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/get_image/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/get_image/newdemo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_image/classify_image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="171" column="33" lean-forward="true" selection-start-line="171" selection-start-column="33" selection-end-line="171" selection-end-column="33" />
+            <state relative-caret-position="15">
+              <caret line="114" selection-start-line="114" selection-end-line="114" />
+              <folding>
+                <element signature="e#1321#1359#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,12 +119,12 @@
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,17 +135,13 @@
             <path>
               <item name="DetectUtilityPoles" type="b2602c69:ProjectViewProjectNode" />
               <item name="DetectUtilityPoles" type="462c0819:PsiDirectoryNode" />
-              <item name="3DModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DetectUtilityPoles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DetectUtilityPoles" type="462c0819:PsiDirectoryNode" />
               <item name="get_image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DetectUtilityPoles" type="b2602c69:ProjectViewProjectNode" />
               <item name="DetectUtilityPoles" type="462c0819:PsiDirectoryNode" />
-              <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
+              <item name="get_image" type="462c0819:PsiDirectoryNode" />
+              <item name="detect" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DetectUtilityPoles" type="b2602c69:ProjectViewProjectNode" />
@@ -202,6 +156,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,7 +296,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2642857" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2642857" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -458,10 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1541557115904" expanded="true" signature="204:209" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -479,9 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16755">
           <caret line="1132" column="28" selection-start-line="1132" selection-start-column="28" selection-end-line="1132" selection-end-column="28" />
-          <folding>
-            <element signature="e#4728#4766#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,9 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -506,10 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1121">
           <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
-          <folding>
-            <marker date="1541744341882" expanded="true" signature="1377:1459" ph="..." />
-            <marker date="1541744341882" expanded="true" signature="1499:1504" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -521,8 +462,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get_image/classify_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="171" column="33" lean-forward="true" selection-start-line="171" selection-start-column="33" selection-end-line="171" selection-end-column="33" />
+        <state relative-caret-position="15">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="e#1321#1359#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
