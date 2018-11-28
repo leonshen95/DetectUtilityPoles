@@ -1,5 +1,5 @@
 # DetectUtilityPoles
-## 11.7 Updated(finishing labeling and training annotated images, in the process of testing...)
+## 11.7 Updated(finishing labeling, training and testing. Now in the process of combining front end and back end...)
 
 The goal is to download the images based on GPS location followed by:
 1. Detecting the poles
@@ -141,6 +141,10 @@ Region Avg IOU: 0.798363, Class: 0.893232, Obj: 0.700808, No Obj: 0.004567, Avg 
 - **9002** - iteration number (number of batch)
 - **0.060730 avg** - average loss (error) - the lower, the better
 2. Once training is stopped, you should take some of last .weights-files from darknet\build\darknet\x64\backup and choose the best of them.
+
+### Testing 
+![Alt text](https://github.com/leonshen95/DetectUtilityPoles/blob/master/predictions%201.jpg?raw=true)
+![Alt text](https://github.com/leonshen95/DetectUtilityPoles/blob/master/predictions%202.jpg?raw=true)
 
 ### Current status
 - In GoogleMapApp folder, the files will provide an interface for user to login and select the target coordinates.
