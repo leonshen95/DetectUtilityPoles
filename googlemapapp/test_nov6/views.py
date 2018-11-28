@@ -55,7 +55,7 @@ def map(request):
         for i in range(1, 7):
             urllib.request.urlretrieve(
                 "https://maps.googleapis.com/maps/api/streetview?size=640x640&location=" + latitude + "," + longitude + "&heading=" + str(
-                    heading) + "&fov=120&key=AIzaSyC0YHD07RkF_YDfS2pHTCLnu-VQlkAabH0", "./static/streetviewimages/"+ str(i) + ".jpg")
+                    heading) + "&fov=120&key=!!!input you key!!!", "./static/streetviewimages/"+ str(i) + ".jpg")
             heading = heading + 60
         shutil.rmtree("/Users/liuknan/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions")
         os.mkdir("/Users/liuknan/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions")
