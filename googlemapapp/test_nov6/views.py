@@ -9,39 +9,46 @@ import os
 
 polelist = []
 def run_detection():
-    os.chdir("/Users/liuknan/Documents/Github/DetectUtilityPoles/googlemapapp/darknet/build/darknet/x64/")
+    polelist = []
+    os.chdir("/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp/darknet/build/darknet/x64/")
     for i in range (1,7):
 
-        os.system("./darknet detector test data/obj.data yolov3-tiny-obj.cfg backup/yolov3-tiny-obj_10000.weights /Users/liuknan/documents/github/DetectUtilityPoles/googlemapapp/static/streetviewimages/"+str(i)+".jpg -dont_show -ext_output < data/train.txt > /Users/liuknan/documents/github/DetectUtilityPoles/googlemapapp/static/result.txt")
-        read_result()
+        os.system("./darknet detector test data/obj.data yolov3-tiny-obj.cfg backup/yolov3-tiny-obj_10000.weights /Users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/streetviewimages/"+str(i)+".jpg -dont_show -ext_output < data/train.txt > /Users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/result.txt")
+        a = read_result()
+        if a == None:
+            pass
+        else:
+            polelist.append(a)
+    return polelist
+
 def read_result():
     global polelist
-    with open ("/Users/liuknan/documents/github/DetectUtilityPoles/googlemapapp/static/result.txt") as f:
+    polelist = []
+    with open ("/Users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/result.txt") as f:
         text=f.read().split()
     try:
         if text[6]=="poles:":
             polelist.append(text[0][-6:-1])
-            shutil.copyfile("predictions.jpg","/Users/liuknan/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions/"+text[0][-6:-1])
+            shutil.copyfile("predictions.jpg","/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions/"+text[0][-6:-1])
+            return text[0][-6:-1]
     except IndexError:
         pass
 
 def same(x):
-  global polelist
   try:
-    print(polelist)
+    print(x)
     for i in range(len(x)):
       if (int(x[i+1][0])-int(x[i][0])==1):
 
-        os.remove("/Users/liuknan/Documents/GitHub/DetectUtilityPoles/googlemapapp/static/predictions/"+str(x[i+1]))
+        os.remove("/Users/wangfuyao/Documents/GitHub/DetectUtilityPoles/googlemapapp/static/predictions/"+str(x[i+1]))
         del x[i+1]
   except IndexError:
     pass
   if ("1.jpg" in x) and ("6.jpg" in x):
 
-    os.remove("/Users/liuknan/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions/6.jpg")
+    os.remove("/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions/6.jpg")
     del x[-1]
-  polelist=[]
-  os.chdir("/Users/liuknan/Documents/Github/DetectUtilityPoles/googlemapapp")
+  os.chdir("/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp")
 
 # Create your views here.
 def map(request):
@@ -55,24 +62,14 @@ def map(request):
         for i in range(1, 7):
             urllib.request.urlretrieve(
                 "https://maps.googleapis.com/maps/api/streetview?size=640x640&location=" + latitude + "," + longitude + "&heading=" + str(
-                    heading) + "&fov=120&key=!!!input you key!!!", "./static/streetviewimages/"+ str(i) + ".jpg")
+                    heading) + "&fov=120&key=AIzaSyC0YHD07RkF_YDfS2pHTCLnu-VQlkAabH0", "./static/streetviewimages/" + str(i) + ".jpg")
             heading = heading + 60
-        shutil.rmtree("/Users/liuknan/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions")
-        os.mkdir("/Users/liuknan/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions")
-        run_detection()
+        shutil.rmtree("/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions")
+        os.mkdir("/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions")
+        polelist = run_detection()
         same(polelist)
-        '''
-        if os.path.exists('D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/polelist.txt'):
-
-            f = open('D:/pyworkspace/DetectUtilityPoles/googlemapapp/static/streetviewimages/polelist.txt','r')
-            for line in f.readlines():
-                line = line.strip()
-                polelist.append(line)
-            f.close()
-
-        print(polelist)
-        '''
-    return render(request, "map.html", )
+        print('pole:', polelist)
+    return render(request, "map.html", {'data': polelist})
 
 def sign_up(request):
     if request.method == "POST":
@@ -92,13 +89,14 @@ def sign_up(request):
     return render(request, "sign-up.html")
 
 def index(request):
+    polelist = []
     if request.method == "POST":
         username = request.POST.get("username", None)
         password = request.POST.get("password", None)
         try:
             u = Users.objects.get(username=username)
             if password == u.password:
-                return render(request, "map.html")
+                return render(request, "map.html", {'data': polelist})
             else:
                 list = ['wrong password']
                 print(json.dumps(list))

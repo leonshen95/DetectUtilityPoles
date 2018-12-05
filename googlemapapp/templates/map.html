@@ -4,29 +4,72 @@
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+      <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+      <style type="text/css">
       #map {
         height: 100%;
       }
-      /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
       }
-    </style>
+      #right {
+        position: fixed;
+        top: 20px;
+        width: 310px;
+        height: 600px;
+        display: table-cell;
+        vertical-align: middle;
+        border: 1px solid #000;
+        background-color: rgba(240,240,240,0.2);
+      }
+      #right{
+        right: 50px;
+      }
+      #p {
+        position: positive;
+        top:5px;
+        left:5px;
+      }
+
+      </style>
   </head>
   <body>
-    <div>
-        <form action="/map/" method="post">
-            <input id="lat" type="text" name="lat" value=""/>
-            <input id="lng" type="text" name="lng" value="">
-            <input type="submit" value="submit"/>
-        </form>
+
+    <div id="map">
     </div>
-    <div id="map"></div>
+    <div id="right">
+        <div>
+            <form action="/map/" method="post" id="p">
+                <input id="lat" type="text" name="lat" value=""/>
+                <input id="lng" type="text" name="lng" value=""/>
+                <input type="submit" value="submit"/>
+            </form>
+        </div>
+
+        {% for p in data %}
+            <div>
+                <a href="/static/predictions/{{p}}" target="_blank>"><img src="/static/predictions/{{p}}"  width="300" height="300"></a>
+            </div>
+        {% endfor %}
+<!--
+        <div>
+            <img src="/static/streetviewimages/1.jpg" width="150" height="150">
+            <img src="/static/streetviewimages/2.jpg" width="150" height="150">
+        </div>
+        <div>
+            <img src="/static/streetviewimages/3.jpg" width="150" height="150">
+            <img src="/static/streetviewimages/4.jpg" width="150" height="150">
+        </div>
+        <div>
+            <img src="/static/streetviewimages/5.jpg" width="150" height="150">
+            <img src="/static/streetviewimages/6.jpg" width="150" height="150">
+        </div>
+-->
+    </div>
     <script src="/static/js/quickstart.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuDbqab0slIXQF7DAnjxVDpYicXH4y05w&callback=initMap"
     async defer></script>
