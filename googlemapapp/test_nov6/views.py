@@ -73,20 +73,28 @@ def map(request):
 
 def sign_up(request):
     if request.method == "POST":
-        list = []
         username = request.POST.get("username", None)
         email = request.POST.get("email", None)
         password = request.POST.get("password", None)
         repassword = request.POST.get("re-password", None)
-        '''
-        if len(username)<6 or len(username)>20:
-            err = 'username should be 6-20 characters or numbers'
-            list.append(err)
-            return render(request, "sign-up.html", {'List': json.dumps(list)})
-        '''
 
+        if len(username)<6 or len(username)>20:
+            err = 'username should be between 6-20'
+            return render(request, "sign-up.html", {'msg': err})
+        else:
+            if len(password)<6 or len(password)>20:
+                err = 'password should be between 6-20'
+                return render(request, "sign-up.html", {'msg': err})
+            else:
+                if password != repassword:
+                    err = 'password input failed'
+                    return render(request, "sign-up.html", {'msg': err})
+                else:
+                    suc = 'Successfully signed up!'
         Users.objects.create(username=username, password=password, email=email)
+        return render(request, "index.html", {'msg': suc})
     return render(request, "sign-up.html")
+
 
 def index(request):
     polelist = []
