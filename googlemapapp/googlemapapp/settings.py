@@ -53,10 +53,6 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 WSGI_APPLICATION = 'googlemapapp.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
