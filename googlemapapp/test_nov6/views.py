@@ -41,7 +41,6 @@ def same(x):
     print(x)
     for i in range(len(x)):
       if (int(x[i+1][0])-int(x[i][0])==1):
-
         os.remove("/Users/wangfuyao/Documents/GitHub/DetectUtilityPoles/googlemapapp/static/predictions/"+str(x[i+1]))
         del x[i+1]
   except IndexError:
