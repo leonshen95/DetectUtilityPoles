@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60b73053-1722-4eb9-a054-fcb718575e2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/darknet/scripts/gen_tactic.sh" beforeDir="false" afterPath="$PROJECT_DIR$/darknet/scripts/gen_tactic.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/darknet/src/detector.c" beforeDir="false" afterPath="$PROJECT_DIR$/darknet/src/detector.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/darknet/src/image.c" beforeDir="false" afterPath="$PROJECT_DIR$/darknet/src/image.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/result.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/streetviewimages/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/streetviewimages/1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/streetviewimages/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/streetviewimages/2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/streetviewimages/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/streetviewimages/3.jpg" afterDir="false" />
@@ -15,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/static/streetviewimages/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/streetviewimages/5.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/streetviewimages/6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/streetviewimages/6.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_nov6/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_nov6/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_nov6/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_nov6/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,13 +120,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="886" />
-          <entry key="py" value="1170" />
+          <entry key="py" value="1190" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="886" />
-          <entry key="Python" value="1113" />
+          <entry key="Python" value="1133" />
           <entry key="Scratch" value="57" />
         </counts>
       </usages-collector>
@@ -189,7 +185,7 @@
         <entry file="file://$PROJECT_DIR$/googlemapapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding>
                 <element signature="e#636#678#0" expanded="true" />
               </folding>
@@ -215,11 +211,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_nov6/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+            <state relative-caret-position="353">
+              <caret line="84" column="53" lean-forward="true" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -227,13 +223,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_nov6/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <marker date="1544670651858" expanded="true" signature="496:501" ph="..." />
+                <marker date="1544671499425" expanded="true" signature="324:329" ph="..." />
               </folding>
             </state>
           </provider>
@@ -306,8 +302,8 @@
         <option value="$PROJECT_DIR$/templates/map.html" />
         <option value="$PROJECT_DIR$/templates/sign-up.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/test_nov6/models.py" />
         <option value="$PROJECT_DIR$/test_nov6/views.py" />
+        <option value="$PROJECT_DIR$/test_nov6/models.py" />
       </list>
     </option>
   </component>
@@ -627,16 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/googlemapapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding>
-            <element signature="e#636#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/googlemapapp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
@@ -672,22 +658,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_nov6/models.py">
+    <entry file="file://$PROJECT_DIR$/test_nov6/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="353">
+          <caret line="84" column="53" lean-forward="true" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
           <folding>
-            <marker date="1544670651858" expanded="true" signature="496:501" ph="..." />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_nov6/views.py">
+    <entry file="file://$PROJECT_DIR$/googlemapapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        <state relative-caret-position="360">
+          <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#636#678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_nov6/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <marker date="1544671499425" expanded="true" signature="324:329" ph="..." />
           </folding>
         </state>
       </provider>
