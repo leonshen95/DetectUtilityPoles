@@ -58,9 +58,6 @@ def map(request):
         now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         latitude = request.POST.get("lat", None)
         longitude = request.POST.get("lng", None)
-
-
-        #program = "D:/pyworkspace/DetectUtilityPoles/googlemapapp/test_nov6/classify_image.py"
         heading = 0
         for i in range(1, 7):
             urllib.request.urlretrieve(
