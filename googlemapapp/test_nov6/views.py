@@ -46,7 +46,6 @@ def same(x):
   except IndexError:
     pass
   if ("1.jpg" in x) and ("6.jpg" in x):
-
     os.remove("/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions/6.jpg")
     del x[-1]
   os.chdir("/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp")
