@@ -15,3 +15,6 @@ class Locations(models.Model):
     lng = models.CharField(max_length=24)
     def __str__(self):
         return self.time
+'''
+class 
+'''
