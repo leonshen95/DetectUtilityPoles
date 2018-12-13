@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from .models import Users
+from .models import Locations
 import json
 import urllib.request
 from django.shortcuts import HttpResponse
 import urllib.request
 import shutil
 import os
+import datetime
 
 polelist = []
 def run_detection():
@@ -53,6 +55,7 @@ def same(x):
 # Create your views here.
 def map(request):
     if request.method == "POST":
+        now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         latitude = request.POST.get("lat", None)
         longitude = request.POST.get("lng", None)
 
@@ -68,7 +71,11 @@ def map(request):
         os.mkdir("/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp/static/predictions")
         polelist = run_detection()
         same(polelist)
-        print('pole:', polelist)
+        if len(polelist)!=0:
+            Locations.objects.create(time=now_time, lat=latitude, lng=longitude)
+        locations = Locations.objects.all().values('lat','lng')
+        for l in locations:
+            print(l)
     return render(request, "map.html", {'data': polelist})
 
 def sign_up(request):

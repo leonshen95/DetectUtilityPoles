@@ -1,1 +1,1 @@
-/Users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/streetviewimages/6.jpg: Predicted in 0.558446 seconds.
+/Users/wangfuyao/documents/github/DetectUtilityPoles/googlemapapp/static/streetviewimages/6.jpg: Predicted in 0.583909 seconds.
