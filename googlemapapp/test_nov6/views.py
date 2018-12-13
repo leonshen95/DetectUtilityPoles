@@ -50,7 +50,6 @@ def same(x):
     del x[-1]
   os.chdir("/Users/wangfuyao/Documents/Github/DetectUtilityPoles/googlemapapp")
 
-# Create your views here.
 def map(request):
     if request.method == "POST":
         now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
