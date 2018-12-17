@@ -161,4 +161,20 @@ manage.py runserver 127.0.0.1:8000
 ```
 http://127.0.0.1:8000/
 ```
+![Alt text](https://github.com/leonshen95/darknet/blob/master/Picture1.jpg?raw=true)
 
+- And you select a point on the Google Map:
+
+![Alt text](https://github.com/leonshen95/darknet/blob/master/Picture2.jpg?raw=true)
+
+- You will automatically capture all 360 degrees pictures at that location:
+
+![Alt text](https://github.com/leonshen95/darknet/blob/master/Picture3.jpg?raw=true)
+
+- The poles will be detected and avoid the duplicate:
+
+![Alt text](https://github.com/leonshen95/darknet/blob/master/Picture4.jpg?raw=true)
+
+- The details of detected poles will be saved:
+
+![Alt text](https://github.com/leonshen95/darknet/blob/master/Picture5.jpg?raw=true)
