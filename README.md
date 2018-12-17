@@ -1,5 +1,5 @@
 # DetectUtilityPoles
-## 11.28 Updated(finishing labeling, training and testing. Now in the process of combining front end and back end...)
+## 12.15 Updated(finishing labeling, training and testing. Complete combining front end and back end.)
 
 The goal is to download the images based on GPS location followed by:
 1. Detecting the poles
@@ -151,10 +151,14 @@ utility poles: 69%
 ![Alt text](https://github.com/leonshen95/DetectUtilityPoles/blob/master/predictions%201.jpg?raw=true)
 ![Alt text](https://github.com/leonshen95/DetectUtilityPoles/blob/master/predictions%202.jpg?raw=true)
 
-### Current status
-- We are during the proccess of combining GoogleMap interface and the detection network.
+### Combine with the front end Google Map
 
-- In GoogleMapApp folder, the files will provide an interface for user to login and select the target coordinates.
-
-- **_examplecode.py_** combines two modules: Getting images from Google Street View API and use the model we trained to see if there is any utility poles. So basically it will take in two types of inputs: 1. the coordinates location used for Google Map; 2. The four corner coordinates of the rectangles that model has detected there is a utility pole.
+- Path to **darknet/googlemapapp** and type command:
+```
+manage.py runserver 127.0.0.1:8000
+```
+- This should build a local host on your computer. Then you can browse our website by type the following url in your browser:
+```
+http://127.0.0.1:8000/
+```
 
